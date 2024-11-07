@@ -40,7 +40,6 @@ Questions that PeopleInsights would like answered are:
 
 10. What are the average salaries based on Job Roles, and how do they compare to Employee Satisfaction levels?
 
-
 ## About the Data
 
 Original data, along with an explanation of each column, can be found [here](https://www.kaggle.com/datasets/vjchoudhary7/hr-analytics-case-study/data).
@@ -108,7 +107,7 @@ This was the only standardization change I needed to make. With the data cleanin
 
 ## Data Modeling and Insights
 
-With the data cleaning
+
 
 1. What is the average Environment Satisfaction score across different departments?
 
