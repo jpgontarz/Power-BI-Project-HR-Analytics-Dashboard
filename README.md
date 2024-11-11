@@ -85,6 +85,22 @@ _Employee_Survey, Environment Satisfaction after data type change_
 
 I applied this change to all similar columns.
 
+Then, I noticed the monthly income values in Employee_Data table display Indian Rupees. I wanted to change these values to show the corresponding dollar amounts from 2015, the year this data was recorded.
+
+Finding an average exchange rate of 64.15 INR per USD, I made the following calculation:
+
+```DAX
+Monthly Income (USD) = Employee_Data[MonthlyIncome] / 64.15
+```
+
+![image](https://github.com/user-attachments/assets/b7a32983-2a61-4f91-bf06-0ed1729893ae)
+
+_Monthly income (INR)_
+
+![image](https://github.com/user-attachments/assets/30b0dede-327d-4c8e-997c-e806f5aa86e7)
+
+_Monthly income (USD)_
+
 #### Duplicates
 
 Next, I checked for and removed any duplicate rows by using the Remove Duplicates tool. There were no duplicates found.
@@ -226,7 +242,17 @@ The education level achieved by the most current employees was a Bachelor's degr
 
 **10. What are the average salaries based on job roles, and how do they compare to employee satisfaction?**
 
+![image](https://github.com/user-attachments/assets/452ba4cc-c681-432f-85e8-6fade1ea5323)
 
+Manufacturing Directors made the most at $1,065 per month, while HR employees made the least at $939 per month. There seemed to be no significant trend in how average job satisfaction compares with compensation, except for that HR employees, while earning the least, do boast the highest average job satisfaction.
+
+**Dashboard**
+
+Along with answering these questions for the HR department, I made an easy-to-use HR dashboard to provide some quick insights.
+
+Included in the dashboard were the number of current employees, average monthly income, attrition rate, average environment satisfaction rating, employees by job role, income vs. education, employees by gender, work-life balance by job satisfaction, age distribution, and high performers by department.
+
+![image](https://github.com/user-attachments/assets/58b20e0a-6229-4248-8a8a-57b16b9f496a)
 
 
 ## Recommendations
