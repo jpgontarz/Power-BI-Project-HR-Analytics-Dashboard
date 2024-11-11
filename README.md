@@ -254,10 +254,24 @@ Included in the dashboard were the number of current employees, average monthly 
 
 ![image](https://github.com/user-attachments/assets/58b20e0a-6229-4248-8a8a-57b16b9f496a)
 
+_Finished dashboard_
 
 ## Recommendations
 
+Given the insights, I would make the following few recommendations to the HR department:
 
+**1. Benefits for Long-Distance Commuters**
+
+Since a majority of employees live far from work, explore work options to ease commuting struggles. If employees who live far away have lower satisfaction ratings, consider more remote work and transportation opportunities to improve satisfaction.
+
+**2. Improve Involvement**
+
+Job involvement ratings between current and former employees do not vary much. Increasing autonomy or participation in business decisions could help job involvement and strengthen retention.
+
+**3. Business Travel Changes**
+
+With nearly 90% of employees traveling for the company to some degree, more efficient business travel is needed. By streamlining travel, employees' work-life balance may improve and costs may be reduced.
 
 ## Conclusion
 
+This analysis highlighted critical insights for PeopleInsights to enhance employee satisfaction, retention, and overall performance. Key findings included a high attrition rate among certain job roles, a correlation between work-life balance and job satisfaction, and varying satisfaction levels based on commuting distance. To address these areas, the company should focus on strengthening its retention strategies, supporting work-life balance initiatives, and tailoring career development programs. By leveraging this analysis to optimize HR practices, PeopleInsights can foster a more engaged and contented workforce, ultimately driving positive organizational outcomes.
