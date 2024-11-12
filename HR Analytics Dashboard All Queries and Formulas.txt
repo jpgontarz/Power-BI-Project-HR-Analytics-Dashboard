@@ -1,0 +1,46 @@
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- HR Analytics Dashboard: ALL QUERIES and FORMULAS --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+-- Data Types --
+-- Change monthly income from INR to USD --
+
+Monthly Income (USD) = Employee_Data[MonthlyIncome] / 64.15
+
+-- Question #1 --
+-- Average Environment Satisfaction rating --
+
+Average Environment Satisfaction = AVERAGEX(Employee_Survey, Employee_Survey[EnvironmentSatisfaction])
+
+-- Question #3--
+-- Distance from home groups --
+
+DistanceFromHomeGroup = IF(Employee_Data[DistanceFromHome] <= 4, "< 5 miles",
+    IF(AND(Employee_Data[DistanceFromHome] >= 5, Employee_Data[DistanceFromHome] <= 9), "5-10 miles",
+        IF(AND(Employee_Data[DistanceFromHome] >= 10, Employee_Data[DistanceFromHome] <= 14), "10-15 miles",
+	    IF(AND(Employee_Data[DistanceFromHome] >= 15, Employee_Data[DistanceFromHome] <= 19), "15-20 miles",
+                IF(AND(Employee_Data[DistanceFromHome] >= 20, Employee_Data[DistanceFromHome] <= 24), "20-25 miles",
+                    IF(Employee_Data[DistanceFromHome] >= 25, "25+ miles"))))))
+
+-- Question #4 --
+-- High performers --
+
+HighPerformer? = IF(AND(Manager_Survey[JobInvolvement] = 4, Manager_Survey[PerformanceRating] = 4), "Yes", "No")
+
+-- Question #6--
+-- Business Travel Yes/No --
+
+BusinessTravelAny? = IF(Employee_Data[BusinessTravel] <> "None", "Yes", "No")
+
+-- Question #7 --
+-- Age groups --
+
+Age Group = IF(AND(Employee_Data[Age] >= 18, Employee_Data[Age] <= 24), "18-24",
+    IF(AND(Employee_Data[Age] >= 25, Employee_Data[Age] <= 34), "25-34",
+        IF(AND(Employee_Data[Age] >= 35, Employee_Data[Age] <= 44), "35-44",
+            IF(AND(Employee_Data[Age] >= 45, Employee_Data[Age] <= 54), "45-54",
+                IF(AND(Employee_Data[Age] >= 55, Employee_Data[Age] <= 64), "55-64")))))
+
+-- Attrition rate --
+
+Attrition Rate = DIVIDE(CALCULATE(COUNT(Employee_Data[EmployeeID]), Employee_Data[Attrition] = "Yes"), COUNT(Employee_Data[EmployeeID]), 0)
